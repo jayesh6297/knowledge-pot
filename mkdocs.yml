@@ -1,0 +1,97 @@
+site_name: Notes Pot
+theme:
+  name: material
+  palette:
+    # -- colors setting --
+    # palettle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: switch to dark mode
+      primary: deep purple
+      accent: cyan
+    
+    # palettle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: switch to light mode
+      primary: deep purple
+      accent: cyan
+    
+  # -- font settings --
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  # -- language settings --
+  language: en
+
+  # -- features --
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - header.autohide
+    - announce.dismiss
+    - search.highlight
+    - search.share
+    - search.suggest
+    # -- navigation speocific
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.path
+  
+  icon:
+    # annotation: material/arrow-right-circle-outline
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+    
+plugins:
+  - offline
+  - tags
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
