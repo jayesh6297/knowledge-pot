@@ -1,16 +1,22 @@
 # Setting up git
 
-!!! note
-	we are setting up git for global config and https not for ssh
+## setting up with https
+---
+- set user name `git --global config user.name "your_user_name"`
+- set email `git --global config user.email "your_email"`
+- install library `libsecret` the library name may change depdending upon linux distribution
+- this will save credentials to gnome-keyring or libsecret `git config --global credential.helper /usr/lib/git-core/git-credential-libsecret`
+- if you can't find this path `/usr/lib/git-core/git-credential-libsecret` then you can use `locate -b git-credential-libsecret`
+- credentials store with libsecret are encrypted so they are secure
 
-- `git --global config user.name "your_user_name"` will set the username of git
-- `git --global config user.email "your_email"` will set the email
-- `git config --global credential.helper store` this will cache the git credentials on your system	
+!!! tip "optional"
+	you can try https://github.com/hickford/git-credential-oauth this library to authenticate using oauth installation instruction are given in repo.
 
-!!! warning
-	since the git credentials are stored in plain text it is advised used some encryption
-	we are doing this to quickly setup the workspace so you can read addtional documentation
-	on storing git crendetials
-
-!!! tip
-	you can also include it in any linux distribution using libsecret package needs to be installed is `libsceret` this may be named differntly for different distributions. `git config --global credential.helper /usr/lib/git-core/git-credential-libsecret` hit this command and enter your username and password for first push then it won't ask for password again. Now if you can't find same path under other distribution you can always use command `locate -b git-credential-libsecret`. optionally you can try https://github.com/hickford/git-credential-oauth this library to authenticate using oauth installation instruction are given in repo.:
+## setting up with ssh
+---
+- install `openssh` package in your system
+- enable service to start on startup for ssh daemon and keygen using `sudo systemctl enable --now sshd sshdgenkeys`
+- run this command to generate keys `ssh-keygen -t ed25519 -C "your_name-git"`
+- finally add the ssh key to ssh-agent using `ssh-add path-to-files/you_name-git`
+- now go to github settings &rarr; SSH and GPG Keys &rarr; click on New SSH Key -> put in title, and content of generated key with extension .pub
+- done
