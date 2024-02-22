@@ -1,3 +1,3 @@
 # Common commands
 
-`podman pull registry/image_name:tag` - will pull the image based on tags <br>
+- pull the image from repo `podman pull registry/image_name:tag`
