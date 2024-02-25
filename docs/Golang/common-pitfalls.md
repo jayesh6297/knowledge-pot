@@ -2751,6 +2751,9 @@ A "goto" statement will do the trick too...
 
 ---
 
+!!! info 
+    solved in go 1.22 -> now the itration variable is per iteration basis not per loop basis
+
 This is the most common gotcha in Go. The iteration variables in `for` statements are reused in each iteration. This means that each closure (aka function literal) created in your `for` loop will reference the same variable (and they'll get that variable's value at the time those goroutines start executing).
 
 **Incorrect:**
