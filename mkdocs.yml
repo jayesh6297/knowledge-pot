@@ -21,7 +21,7 @@ theme:
     
   # -- font settings --
   font:
-    text: Inter
+    text: Roboto
     code: JetBrains Mono
 
   # -- language settings --
@@ -31,21 +31,21 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
+    - content.code.select
     - content.tabs.link
+    - content.tooltips
     - header.autohide
     - announce.dismiss
     - search.highlight
     - search.share
     - search.suggest
-    # -- navigation speocific
+    # -- navigation specific
     - navigation.footer
     - navigation.indexes
-    # - navigation.sections
     - navigation.tabs
     - navigation.top
     - navigation.tracking
-    - navigation.path
-  
+    - toc.follow
   icon:
     # annotation: material/arrow-right-circle-outline
     admonition:
@@ -69,19 +69,21 @@ plugins:
 
 markdown_extensions:
   - pymdownx.highlight:
+      use_pygments: true
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+      linenums_style: pymdownx-inline
+      # linenums: true
   - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - attr_list
-  - md_in_html
-  - admonition
+  - pymdownx.snippets:
+      base_path:
+        - "codes"
+      check_paths: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  - tables
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
@@ -90,6 +92,11 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - attr_list
+  - sane_lists
+  - md_in_html
+  - admonition
+  - tables
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true

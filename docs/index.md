@@ -1,3 +1,9 @@
+---
+hide:
+    - navigation
+    - toc
+---
+
 # Home
 
 This page contains examples of how to proceed with notetaking and knowledge base with mkdocs syntax
@@ -77,7 +83,7 @@ def bubble_sort(items):
 
 - emmbedding code from source file
 ```py linenums="1" title="example.py"
---8<-- "docs/example.py"
+--8<-- "example.py"
 ```
 
 - content tab
