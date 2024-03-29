@@ -32,7 +32,7 @@ theme:
     - content.code.annotate
     - content.code.copy
     - content.code.select
-    - content.tabs.link
+    # - content.tabs.link
     - content.tooltips
     - header.autohide
     - announce.dismiss
@@ -47,7 +47,6 @@ theme:
     - navigation.tracking
     - toc.follow
   icon:
-    # annotation: material/arrow-right-circle-outline
     admonition:
       note: fontawesome/solid/note-sticky
       abstract: fontawesome/solid/book
@@ -68,12 +67,20 @@ plugins:
   - search
 
 markdown_extensions:
+  - markdown.extensions.toc:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      permalink: "\ue157"
   - pymdownx.highlight:
       use_pygments: true
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
       linenums_style: pymdownx-inline
+      # guess_lang: false
+      # css_class: "highlight"
+      # linenums_class: "linenums"
+      # noclasses: true
+      # pygments_style: "one-dark"
       # linenums: true
   - pymdownx.inlinehilite
   - pymdownx.snippets:
@@ -82,7 +89,13 @@ markdown_extensions:
       check_paths: true
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.smartsymbols
+  - pymdownx.betterem:
+      smart_enable: all
   - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
       alternate_style: true
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
@@ -92,6 +105,9 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  # - pymdownx.escapeall:
+  #     hardbreak: True
+  #     nbsp: True
   - attr_list
   - sane_lists
   - md_in_html
