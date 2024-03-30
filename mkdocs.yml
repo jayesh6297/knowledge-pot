@@ -60,6 +60,9 @@ theme:
       bug: fontawesome/solid/robot
       example: fontawesome/solid/flask
       quote: fontawesome/solid/quote-left
+
+extra_css:
+  - stylesheets/extra.css
     
 plugins:
   - offline
