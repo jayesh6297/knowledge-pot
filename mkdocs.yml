@@ -72,7 +72,7 @@ plugins:
 markdown_extensions:
   - markdown.extensions.toc:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
-      permalink: "\ue157"
+      permalink: "🔗"
   - pymdownx.highlight:
       use_pygments: true
       anchor_linenums: true
