@@ -27,3 +27,15 @@ We will need docker or podman with minkube in order to run it. Although podman i
     minikube start
     ```
 either of command will be fine. if you use docker only then i suggest you use minikube config to set docker driver as always.
+
+- Check the minikube node ip using `minikube IP`. Or you can ssh into it using `minikube ssh` &larr; this will take you into minikube node
+- Fire `minikube status` to check running status
+- Hit `docker ps` after `minikube ssh` to check running containers and all services running in control plane
+
+!!! note
+    minikube only create one node and it behaves as master and worker node
+
+!!! note
+    For our convinience we will set shortcut to `minikube` as `mk` 
+    1. open `.zshrc` or `.bashrc` in your favourite editor
+    2. type alias mk="minikube"
