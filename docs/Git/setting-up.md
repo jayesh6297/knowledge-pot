@@ -20,6 +20,6 @@
 - provide filename to save generally i recommend to use githubusername-git
 - there will be 2 files generated in current directory one public key .pub extension and other without extension that's your private key
 - finally add the ssh key to ssh-agent using `ssh-add path-to-files/you_name-git` remember always add private key
-- if ssh-agent is not started you can start it by using ``` eval \`ssh-agent\` ```and then again follow previous step.
+- if ssh-agent is not started you can start it by using ``` eval `ssh-agent` ```and then again follow previous step.
 - now go to github settings &rarr; SSH and GPG Keys &rarr; click on New SSH Key -> put in title, and content of generated key with extension .pub
 - done
