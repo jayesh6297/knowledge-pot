@@ -16,10 +16,17 @@ tags:
 // Year: "2006" "06"
 // Day of the year: "__2" "002"
 // Hour: "15" "3" "03" (PM or AM)
-// Minute: "4" "04"
-// Second: "5" "05"
+// Minute: "04"
+// Second: "05"
+// Miliseconds: "05"
 // AM/PM mark: "PM"
+// TimeZone: "MST" "-0700"
 fmt.Println(time.Now().Format("2006 Jan 02 03:04 PM"))
+fmt.Println(time.Now().Format("02-01-2006 15:04:05 MST"))
+fmt.Println(time.Now().Format("02-01-2006T15:04:05TZ-0700"))
+
+// or you can use rfc standard
+fmt.Println(time.Now().Format(time.RFC3339))
 
 // output
 // 2022 Aug 22 01:43 PM
