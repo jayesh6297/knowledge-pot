@@ -414,7 +414,6 @@ type employer struct {
             Cap  int
     }
     ```
-    
     ![slices](https://raw.githubusercontent.com/ark-j/knowledge-pot/refs/heads/main/assets/images/golang/basics/slice.webp)
     
 - default value of slice is usable.
