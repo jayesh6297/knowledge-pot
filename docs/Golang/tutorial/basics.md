@@ -11,7 +11,6 @@ tags:
 1. Go programs are made up of packages
 2. Execution of program starts from `main()` function in `main` package.
 3. Example `math/rand` comprises of files that starts with `package rand` 
-
 ```go 
 package main
 
@@ -23,7 +22,6 @@ func main() {
 ```
 
 - use parenthesized import statement for multiple imports
-
 ```go 
 package main
 
@@ -34,7 +32,6 @@ import (
 ```
 
 - **Exporting →** Everything which starts from capital letter is exportable in go. all remaining are accessible at package level .
-
 ```go 
 package greeter
 
@@ -88,7 +85,6 @@ func GreetBomb() {
 
 - Go provide control flow statement such as if - else, switch, for loop.
 - Brackets in Go if else around the condition are omitted.
-
 ```go
 if condition {
    //Do something
@@ -100,7 +96,6 @@ if condition {
 ```
 
 - short statement can also be used such as assigning and putting condition on it.
-
 ```go
 if statement; condition {
    //Do something
@@ -109,7 +104,6 @@ if statement; condition {
 ```
 
 - switch statement
-
 ```go
 switch statement; expression {
 case expression1:
@@ -123,7 +117,6 @@ default:
 ```
 
 - for loop → init and post part are optional remove them and you will get while loop. remove all and get while loop infinity. use `continue` and `break` keyword to continue and break flow of loop respectively. use range keyword to get iterator dynamically
-
 ```go
 package main
 
@@ -164,7 +157,6 @@ func loop() {
 ---
 
 - basic function in golang
-
 ```go
 func fn() {
 	fmt.Println("simple function")
@@ -172,7 +164,6 @@ func fn() {
 ```
 
 - function with paramters
-
 ```go
 func fn(name string) {
 	fmt.Println(name)	
@@ -180,7 +171,6 @@ func fn(name string) {
 ```
 
 - function with varidaic parameters
-
 ```go
 func fn(nums ...int) {
 	sum := 0
@@ -192,7 +182,6 @@ func fn(nums ...int) {
 ```
 
 - closure or inline function in go. It can also be assigned to variable
-
 ```go
 func fn() {
 	// closure
@@ -211,7 +200,6 @@ func fn() {
 ```
 
 - function with return type and return name and type declared
-
 ```go
 // function with multiple return type and arguments
 func getNames(name1, name2 string) (string, string) {
@@ -228,7 +216,6 @@ func returnMentioned() (count int) {
 - `init` function
 - executes before main function and use cases include initilizing some value or configuration at runtime
 - each  package have there own init function
-
 ```go
 package main
 
@@ -250,7 +237,6 @@ func init(){
 
 - Go’s way of dealing with an error is to explicitly return the error as a separate value
 - you can check if returned error value from function is nil or not for error checking
-
 ```go
 package main
 
@@ -275,7 +261,6 @@ func main() {
     - in below program `inputError` is a type of struct which implements the `Error()` interface method.
     - and `missingField` is addtional field in `inputError` to provide more information about error along with it’s method called `getMissingField`.
     - lastly `validate()` function will return `pointer to inputError that can be nil` and `advancedCustomError()` will type assert error and get the missing field name.
-
 ```go
 // advanced custom error message
 func advancedCustomError() {
@@ -328,7 +313,6 @@ func (i *inputError) getMissingField() string {
 - deferred function always execute even if surrounding function execution failed abrruptly.
 - deferred function will execute before surrounding function returns.
 - mutliple defer keyword execute last in first out order
-
 ```go
 package main
 import "fmt"
@@ -377,6 +361,7 @@ func pointers() {
 }
 
 // output
+//WARN: this addresses may changes on your system
 original variable: Jayesh
 pointer adress: 0xc00004c230
 referenced variable value: Jayesh
@@ -395,7 +380,6 @@ actual ssptr point value derefrenced: Jayesh
     - to manage struct state they need to be pass by reference (pointers)
 - structs can be nested.
 - nested field are also accessed by dot notation
-
 ```go
 // simple struct
 type employee struct {
@@ -423,7 +407,6 @@ type employer struct {
     - pointer to underlying array →`always pass by reference`
     - current lenght of underlying array →`len()`
     - total capacity which is the maximum capacity to which the underlying array can expand → `cap()`
-    
     ```go
     type SliceHeader struct {
             Pointer uintptr
@@ -454,7 +437,6 @@ type employer struct {
     - Map
     - Function
 - if there are duplicate key the recent value for key is considerd and previous value is discarded
-
 ```go
 salary := map[string]int{"manoj": 2000}
 	salary["manoj"] = 3000
@@ -466,7 +448,6 @@ salary map: map[manoj:3000 nitin:1000]
 ```
 
 - you can iterate over map using for range loop
-
 ```go
 for k, v := range salary{
 	fmt.Printf("key: %v, value: %v\n", k,v)
@@ -474,7 +455,6 @@ for k, v := range salary{
 ```
 
 - map are refrenced data type and is not safe for concurrent use. two variable assigned to each other containing map will point to same map and changes will be reflected wise versa.
-
 ```go
 func main(){
 	user := map[string]string{
@@ -501,7 +481,6 @@ func mapPassed(user map[string]string) {
 - methods are receiver function on specific type, eg struct or other function or interface.
 - methods can access properties of receiver and other methods on that type.
 - basics syntax `func (receiver receiver_type) some_func_name(arguments) return_values`.
-
 ```go
 type user struct {
 	id          int
@@ -526,7 +505,6 @@ func (u *user) validate() error {
 ```
 
 - methods on function type
-
 ```go
 type Greeting func(name string) string
 
@@ -552,7 +530,6 @@ func main() {
 ---
 
 - basic syntax
-
 ```go
 type interface_name interface{
 	method_name(argument_name argument_type) returnvalues and types 
