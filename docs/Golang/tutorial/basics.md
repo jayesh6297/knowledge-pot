@@ -12,7 +12,7 @@ tags:
 2. Execution of program starts from `main()` function in `main` package.
 3. Example `math/rand` comprises of files that starts with `package rand` 
 
-```go linenumes="1"
+```go 
 package main
 
 import "fmt"
@@ -24,7 +24,7 @@ func main() {
 
 - use parenthesized import statement for multiple imports
 
-```go
+```go 
 package main
 
 import (
@@ -35,7 +35,7 @@ import (
 
 - **Exporting →** Everything which starts from capital letter is exportable in go. all remaining are accessible at package level .
 
-```go
+```go 
 package greeter
 
 // greet is only accessible inside greet package
@@ -51,7 +51,6 @@ func GreetBomb() {
 }
 ```
 ### how to execute
-
 ---
 
 - Execution of program starts from `main()` function in main package
@@ -69,7 +68,6 @@ func GreetBomb() {
 - There are local and global variables local are bound the scope of block or function. global variables are accessible through out the package.
 
 > tip: global variables cannot be declared by wallrus operator
-> 
 
 ### Data Types
 ---
