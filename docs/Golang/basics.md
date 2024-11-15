@@ -572,7 +572,7 @@ type animal interface {
 - Helps write more modular and decoupled code between different parts of codebase – It can help reduce dependency between different parts of codebase and provide loose coupling this is application of interface.
 - A type implements an interface if it defines all methods of an interface. If that defines all methods of another interface then it implements that interface. In essence, a type can implement multiple interfaces.
 
-![interfaces](https://raw.githubusercontent.com/ark-j/knowledge-pot/refs/heads/main/assets/images/golang/basics/interfaces_1.webp)
+![interfaces](https://raw.githubusercontent.com/ark-j/knowledge-pot/refs/heads/main/assets/images/golang/basics/interface_1.webp)
 
 - type asserting syntax `val := i.({type})`
 - to get concret value of interface type assertion is used in golang.
