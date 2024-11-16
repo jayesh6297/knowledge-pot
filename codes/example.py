@@ -1,4 +1,5 @@
 from dataclasses import dataclasses
+from typing import List
 
 @dataclasses
 class User:
@@ -6,4 +7,4 @@ class User:
     name: str
     age: float
     weight: float
-    addr: []str
+    addr: List[str]

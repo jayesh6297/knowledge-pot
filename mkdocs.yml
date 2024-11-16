@@ -8,17 +8,17 @@ theme:
       toggle:
         icon: material/weather-night
         name: switch to dark mode
-      primary: deep purple
+      primary: cyan
       accent: cyan
-    
+
     # palettle for dark mode
     - scheme: slate
       toggle:
         icon: material/weather-sunny
         name: switch to light mode
-      primary: deep purple
+      primary: cyan
       accent: cyan
-    
+
   # -- font settings --
   font:
     text: Roboto
@@ -63,7 +63,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-    
+
 plugins:
   - offline
   - tags
@@ -71,7 +71,8 @@ plugins:
 
 markdown_extensions:
   - markdown.extensions.toc:
-      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      slugify:
+        !!python/object/apply:pymdownx.slugs.slugify { kwds: { case: lower } }
       permalink: "🔗"
   - pymdownx.highlight:
       use_pygments: true
@@ -108,9 +109,6 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  # - pymdownx.escapeall:
-  #     hardbreak: True
-  #     nbsp: True
   - attr_list
   - sane_lists
   - md_in_html
@@ -121,3 +119,4 @@ markdown_extensions:
       custom_checkbox: true
   - toc:
       permalink: true
+
