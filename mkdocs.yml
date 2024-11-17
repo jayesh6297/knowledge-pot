@@ -22,7 +22,7 @@ theme:
   # -- font settings --
   font:
     text: Roboto
-    code: JetBrains Mono
+    code: JetBrainsMono Nerd Font
 
   # -- language settings --
   language: en
@@ -119,4 +119,3 @@ markdown_extensions:
       custom_checkbox: true
   - toc:
       permalink: true
-

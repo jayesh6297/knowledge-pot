@@ -2,4 +2,18 @@
 .md-typeset details {
   border-width: 0;
   border-left-width: 4px;
+  border-radius: 0;
+}
+
+@font-face{
+	font-family: "JetBrainsMono Nerd Font";
+	src: url("./fonts/JetBrainsMonoNerdFontPropo-Regular.ttf")
+}
+
+code {
+	border-radius: 10px !important;
+}
+
+.md-tag {
+	border-radius: 5px !important;
 }
