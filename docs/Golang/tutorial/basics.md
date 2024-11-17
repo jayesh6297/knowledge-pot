@@ -47,7 +47,7 @@ func GreetBomb() {
 	}
 }
 ```
-### how to execute
+### How to execute
 ---
 
 - Execution of program starts from `main()` function in main package
@@ -80,7 +80,7 @@ func GreetBomb() {
 - `string` is slice of bytes and can be declare using double qoutes which respects escape sequence while raw string does not.
 - `boolean` → `OR ||` `AND &&` `NEGATION !`
 
-### control flow
+### Control flow
 ---
 
 - Go provide control flow statement such as if - else, switch, for loop.
@@ -153,7 +153,7 @@ func loop() {
 }
 ```
 
-### functions
+### Functions
 ---
 
 - basic function in golang
@@ -232,7 +232,7 @@ func init(){
 // main function
 ```
 
-### errors
+### Errors
 ---
 
 - Go’s way of dealing with an error is to explicitly return the error as a separate value
@@ -301,12 +301,12 @@ func (i *inputError) getMissingField() string {
 }
 ```
 
-### panic and recover
+### Panic and recover
 ---
 
 - you can wrap error using  `fmt.Errorf("E2: %w", e1)` %w is used to wrap an error.
 
-### defer keyword
+### Defer keyword
 ---
 
 - defer keyword send any execution to end of function
@@ -331,7 +331,7 @@ func main() {
 // 1
 ```
 
-### pointers
+### Pointers
 ---
 
 - pointer declaration `var sptr *string`
@@ -370,7 +370,7 @@ ssptr value to original pointer: 0xc00004c230
 actual ssptr point value derefrenced: Jayesh
 ```
 
-### structs
+### Structs
 ---
 
 - struct is collection of fields.
@@ -400,7 +400,7 @@ type employer struct {
 }
 ```
 
-### slices
+### Slices
 ---
 
 - slices in golang represents three follwing things →
@@ -418,7 +418,7 @@ type employer struct {
     
 - default value of slice is usable.
 
-### maps
+### Maps
 ---
 
 - default nil value of map cannot be used.
@@ -474,7 +474,7 @@ func mapPassed(user map[string]string) {
 // map[name:John wick profession:assasination status:rich]
 ```
 
-### methods
+### Methods
 ---
 
 - methods are receiver function on specific type, eg struct or other function or interface.
@@ -525,7 +525,7 @@ func main() {
 }
 ```
 
-### interfaces
+### Interfaces
 ---
 
 - basic syntax
