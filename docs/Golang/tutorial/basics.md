@@ -64,7 +64,8 @@ func GreetBomb() {
 - you can also declare multiple variables on same line using wallrus(:=) operator `a,b := 1,2`
 - There are local and global variables local are bound the scope of block or function. global variables are accessible through out the package.
 
-> tip: global variables cannot be declared by wallrus operator
+!!! warning
+    global variables cannot be declared by wallrus operator
 
 ### Data Types
 ---
